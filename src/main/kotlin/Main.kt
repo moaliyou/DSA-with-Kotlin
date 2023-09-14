@@ -1,18 +1,27 @@
 fun main() {
-    val elements = intArrayOf(2, 3, 4, 5, 6, 7, 8, 10, 12, 34, 59)
-    val targetElement = 100
+    val elementsInAscending = intArrayOf(
+        -18, -12, -4, 0, 2, 3, 4, 15, 16, 18, 22, 45, 98
+    )
+//    val elementsInDescending = intArrayOf(
+//        99, 80, 75, 22, 11, 10, 5, 2, -3
+//    )
+    val targetElement = 22
 
-    val indexOfTargetElement = BinearySearch().findElementIndex(elements, target = targetElement)
+    val indexOfTargetElement = BinarySearch()
+        .findElementIndex(
+            elements = elementsInAscending,
+            target = targetElement
+        )
 
     if (indexOfTargetElement != -1) {
         println(
             "The element $targetElement exists at index $indexOfTargetElement " +
-                    "of array ${elements.contentToString()}."
+                    "of array ${elementsInAscending.contentToString()}."
         )
     } else {
         println(
             "The element $targetElement was not found " +
-                    "in the array ${elements.contentToString()}."
+                    "in the array ${elementsInAscending.contentToString()}."
         )
     }
 }
