@@ -1,5 +1,47 @@
 class BinarySearch {
 
+    fun findFloorNumber(elements: IntArray, target: Int): Int {
+        var startPosition = 0
+        var endPosition = elements.size - 1
+
+        while (startPosition <= endPosition) {
+            val indexOfMiddleElement = startPosition + (endPosition - startPosition) / 2
+            val middleElement = elements[indexOfMiddleElement]
+
+            if (middleElement == target) {
+                return indexOfMiddleElement
+            }
+
+            if (target < middleElement) {
+                endPosition = indexOfMiddleElement - 1
+            } else {
+                startPosition = indexOfMiddleElement + 1
+            }
+        }
+        return endPosition
+    }
+
+    fun findCeilingNumber(elements: IntArray, target: Int): Int {
+        var startPosition = 0
+        var endPosition = elements.size - 1
+
+        while (startPosition <= endPosition) {
+            val indexOfMiddleElement = startPosition + (endPosition - startPosition) / 2
+            val middleElement = elements[indexOfMiddleElement]
+
+            if (middleElement == target) {
+                return indexOfMiddleElement
+            }
+
+            if (target < middleElement) {
+                endPosition = indexOfMiddleElement - 1
+            } else {
+                startPosition = indexOfMiddleElement + 1
+            }
+        }
+        return startPosition
+    }
+
     fun findElementIndex(elements: IntArray, target: Int): Int {
         var startPosition = 0
         var endPosition = elements.size - 1

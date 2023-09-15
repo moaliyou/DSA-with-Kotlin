@@ -13,15 +13,8 @@ fun main() {
             target = targetElement
         )
 
-    if (indexOfTargetElement != -1) {
-        println(
-            "The element $targetElement exists at index $indexOfTargetElement " +
-                    "of array ${elementsInAscending.contentToString()}."
-        )
-    } else {
-        println(
-            "The element $targetElement was not found " +
-                    "in the array ${elementsInAscending.contentToString()}."
-        )
-    }
+    val numbers = intArrayOf(2, 3, 5, 9, 14, 16, 18)
+    val target = 19
+
+    println(BinarySearch().findFloorNumber(numbers, target))
 }
