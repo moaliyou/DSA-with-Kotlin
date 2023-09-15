@@ -21,7 +21,11 @@ class BinarySearch {
         return endPosition
     }
 
-    fun findCeilingNumber(elements: IntArray, target: Int): Int {
+    fun findCeilingNumber(elements: IntArray?, target: Int): Int {
+
+        if (elements == null || elements.isEmpty() || target > elements[elements.size - 1])
+            return -1
+
         var startPosition = 0
         var endPosition = elements.size - 1
 

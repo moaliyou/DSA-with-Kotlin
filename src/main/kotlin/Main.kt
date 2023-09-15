@@ -16,5 +16,5 @@ fun main() {
     val numbers = intArrayOf(2, 3, 5, 9, 14, 16, 18)
     val target = 19
 
-    println(BinarySearch().findFloorNumber(numbers, target))
+    println(BinarySearch().findCeilingNumber(numbers, target))
 }
